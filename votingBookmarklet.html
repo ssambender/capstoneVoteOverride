@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Voting Bookmarklet Button</title>
+</head>
+<style>
+    body {
+        font-family: sans-serif;
+    }
+    #bookmark {
+        background-color: dodgerblue;
+        padding: 8px 32px;
+        border-radius: 4px;
+        color: white;
+        font-weight: bold;
+        text-decoration: none;
+        box-sizing: border-box;
+        transition: background-color .2s ease;
+    }
+    #bookmark:hover {
+        background-color: #1d7cd9;
+        transition: background-color .2s ease;
+    }
+</style>
+<body>
+
+
+<div style="border: dashed 1px black; box-sizing: border-box; padding: 8px; display: flex; flex-direction: column; align-items: center; width: fit-content; text-align: center;">
+
+    Drag the following button to your bookmarks bar.
+    <br><br>
+
+    <a id="bookmark" href="javascript:function deleteCookieThatInclude(cookieName){document.cookie.split(';').forEach(cookie=>{let cookieTrimmed=cookie.trim();if(cookieTrimmed.indexOf(cookieName)===0){document.cookie=cookieTrimmed.split('=')[0]+'=;expires=Thu, 01 Jan 1970 00:00:00 UTC;path=/';}});}deleteCookieThatInclude('PDRTJS_nero_8987170');setTimeout(function(){document.getElementById('PDRTJS_8987170_nero_1').click();setTimeout(function(){location.reload();},1000);},100);">
+        VOTE AGAIN
+    </a>
+
+    <br>
+    <span>Then, on the <a href="">capstone page</a> you want to vote for, click the bookmark to vote!</span>
+
+</div>
+
+</body>
+</html>
